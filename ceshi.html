@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body>
+	<script src="jquery.min.js"></script>
+    <script>
+    
+	    $.ajax({
+			url:"http://localhost:8888/my/mybatis_getAll",
+			data:{},
+			dataType:'json',
+			// 将XHR对象的withCredentials设为true 使得在发送请求时加上cookie信息
+			xhrFields: {  
+				  withCredentials: true  
+			},
+			success:function(data){
+			   console.log(data)
+			}
+		});
+    </script>
+</body>
+
+</html>
